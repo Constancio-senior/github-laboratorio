@@ -18,4 +18,6 @@ Este repositorio foi criado para estudar Git e GitHub na prática.
 ## Autor
 
 Constâncio Júnior
+## Ambiente de desenvolvimento
 
+Projeto configurado com Git, GitHub, Linux e Visual Studio Code
