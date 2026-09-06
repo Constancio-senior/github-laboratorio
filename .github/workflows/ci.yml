@@ -8,7 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4 
+    - uses: actions/checkout@v4
+    - name: Testes python
+      working-directory: python
+      run: python3 test_app.py 
     - name: Testar ambiente
       run: echo "Github Actions funcionando" 
     - name: Build Docker
