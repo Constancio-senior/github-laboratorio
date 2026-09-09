@@ -10,8 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Validar sintaxe Python
-    - working-directory: python
-    - run: python3 -m compileall .
+      working-directory: python
+      run: python3 -m compileall .
     - name: Testes python
       working-directory: python
       run: python3 test_app.py 
