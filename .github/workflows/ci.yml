@@ -18,9 +18,18 @@ jobs:
     - name: Validar sintaxe Python
       working-directory: python
       run: python3 -m compileall .
-    - name: Testes python
+    - name: Instalar ferramentas de teste
+      run: python3 -m pip install pytest coverage
+
+    - name: Executar testes com cobertura
       working-directory: python
-      run: python3 test_app.py 
+      run: python3 -m coverage run --source=app -m pytest -v
+
+    - name: Validar cobertura minima
+      working-directory: python
+      run: python3 -m coverage report -m --fail-under=90
+
+
     - name: Testar ambiente
       run: echo "Github Actions funcionando" 
     - name: Build Docker
