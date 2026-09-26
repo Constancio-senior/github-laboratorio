@@ -2,6 +2,7 @@ import runpy
 
 from app import main
 
+
 def test_main_output(capsys):
     main()
 
