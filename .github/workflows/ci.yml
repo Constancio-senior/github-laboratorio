@@ -9,6 +9,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Instalar Ruff
+      run: python3 -m pip install ruff
+    - name: Validar qualidade com Ruff
+      working-directory: python
+      run: ruff check .
+
     - name: Validar sintaxe Python
       working-directory: python
       run: python3 -m compileall .
